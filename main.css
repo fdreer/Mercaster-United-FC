@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  background-color: #f1f1f1;
+}
+
+.main-header {
+  background-color: #075699;
+  color: white;
+  padding: 15px 0;
+  height: 10vh;
+}
+
+.presentacion {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.presentacion .linea-gradiente {
+  width: 100%;
+  height: 5px;
+  background-color: #ed2f39;
+  border-radius: 30px;
+}
+.presentacion .logo-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px;
+}
+.presentacion .logo-name .logo {
+  width: 50px;
+}
+.presentacion .logo-name h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+.nav-bar {
+  display: none;
+  width: 30%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.nav-bar ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav-bar ul li {
+  padding: 0 10px;
+  text-transform: uppercase;
+}
+.nav-bar ul li a {
+  color: white;
+}
+
+.turnos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 20vh;
+}
+.turnos h3 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.btn, .btn-desafio {
+  border: none;
+  border-radius: 50px;
+  background-color: #075699;
+  padding: 15px 20px;
+}
+.btn a, .btn-desafio a {
+  color: white;
+  font-size: 1rem;
+}
+.btn-desafio {
+  padding: 15px 25px;
+  position: relative;
+  bottom: 10px;
+}
+.btn-desafio a {
+  font-size: 1.2rem;
+}
+
+.postheader {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/img/213529981_3040689532809841_7503792482973517576_n.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 70vh;
+}
+.postheader h1 {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 2.5rem;
+  padding-top: 10px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 70px;
+}
+.cards .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 75%;
+  max-width: 360px;
+  margin: 0 20px 30px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  /*Para que la imagen no colapse del contenedor*/
+}
+.cards .card img {
+  width: 100%;
+}
+.cards .card h2 {
+  text-align: center;
+  padding: 20px 0;
+}/*# sourceMappingURL=main.css.map */

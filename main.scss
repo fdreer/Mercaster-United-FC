@@ -1,0 +1,182 @@
+//VARIABLES
+
+$main-color: #075699;
+$secundary-color: #ed2f39;
+$color-de-main: #f1f1f1;
+$font-family: 'Raleway', sans-serif;
+//PARTIALS
+
+//MIXINS
+
+@mixin flex ($justify , $align){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+//ESTILOS-GENERALES
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $font-family;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+main{
+    background-color: $color-de-main;
+}
+
+.main-header{
+    background-color: $main-color;
+    color: white;
+    padding: 15px 0;
+    height: 10vh
+}
+
+.presentacion{
+    @include flex(space-around, center);
+
+    .linea-gradiente{
+        width: 100%;
+        height: 5px;
+        background-color: $secundary-color;
+        border-radius: 30px
+    }
+
+    .logo-name{
+        @include flex(center, center);
+
+        margin: 0 15px;
+
+        .logo{
+            width: 50px;
+        }    
+    
+        h2{
+            margin: 0;
+            font-size: 1.1rem;
+            white-space: nowrap;
+        }
+    }
+    
+}
+
+.nav-bar{
+    display: none;
+    width: 30%;
+    margin: 0 auto;
+    padding-top: 20px;
+
+    ul{
+        @include flex(space-around, center);
+
+        li{
+            padding: 0 10px;
+            text-transform: uppercase;
+
+            a{
+                color: white;
+            }
+        }
+    }
+}
+
+.turnos{
+    @include flex(space-around, center);
+    flex-direction: column;
+
+    height: 20vh;
+
+    h3{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
+.btn{
+    border: none;
+    border-radius: 50px;
+    background-color: $main-color;
+    padding: 15px 20px;
+
+    :hover{
+    }
+
+    a{
+        color: white;
+        font-size: 1rem;
+    }
+
+    &-desafio{
+        @extend .btn;
+        padding: 15px 25px;
+        position: relative;
+        bottom: 10px;
+
+        a{
+            font-size: 1.2rem;
+        }
+    }
+
+}
+
+.postheader{
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('/img/213529981_3040689532809841_7503792482973517576_n.JPG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    
+
+    height: 70vh;
+
+    h1{
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 2.5rem;
+        padding-top: 10px
+    }
+}
+
+.cards{
+    @include flex(center, center);
+    flex-wrap: wrap;
+
+    margin-top: 70px;
+
+    .card{
+        @include flex(center, center);
+        flex-direction: column;
+
+        width: 75%;
+        max-width: 360px;
+        margin: 0 20px 30px;
+        padding-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+        overflow: hidden; /*Para que la imagen no colapse del contenedor*/
+
+        img{
+            width: 100%;
+        }
+
+        h2{
+            text-align: center;
+            padding: 20px 0;
+        }
+    }
+}
